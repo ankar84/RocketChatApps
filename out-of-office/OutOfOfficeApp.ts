@@ -59,13 +59,18 @@ export class OutOfOfficeApp extends App implements IPostMessageSent {
             await read.getNotifier().notifyUser(message.sender, msgMe);
         }
 
-        const otherUsers = message.room.usernames.filter((u) => u !== message.sender.username);
+        const otherUserIds = message.room.userIds;
+        if (otherUserIds == undefined) {
+            // We don't care if there isn't one other person in the room
+            return;
+        }
+        const otherUsers = otherUserIds.filter((u) => u !== message.sender.id);
         if (otherUsers.length !== 1) {
             // We don't care if there isn't one other person in the room
             return;
         }
 
-        const otherUser = await read.getUserReader().getByUsername(otherUsers[0]);
+        const otherUser = await read.getUserReader().getById(otherUsers[0]);
         const assoc = new RocketChatAssociationRecord(RocketChatAssociationModel.USER, otherUser.id);
 
         const awayDatas = await read.getPersistenceReader().readByAssociation(assoc);
