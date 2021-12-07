@@ -1,0 +1,16 @@
+{
+    "id": "50237305-5711-466d-a5ec-1995d0a4f699",
+    "version": "0.1.0",
+    "requiredApiVersion": "^1.15.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Bradley Hilton",
+        "homepage": "https://rocket.chat",
+        "support": "https://rocket.chat/support"
+    },
+    "name": "Second Test App",
+    "nameSlug": "second-test-app",
+    "classFile": "SecondTestAppApp.ts",
+    "description": "Another app to help test the staging environment.",
+    "implements": []
+}

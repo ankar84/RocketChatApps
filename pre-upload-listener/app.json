@@ -1,0 +1,18 @@
+{
+    "id": "5a674188-f41d-4fcb-a8a5-541426dad85f",
+    "version": "1.0.0",
+    "requiredApiVersion": "^1.25.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Bradley Hilton",
+        "homepage": "https://rocket.chat",
+        "support": "https://rocket.chat/support"
+    },
+    "name": "PreUpload Listener Test",
+    "nameSlug": "preupload-listener-test",
+    "classFile": "PreUploadListener.ts",
+    "description": "An App which tests uploads.",
+    "implements": [
+        "IPreFileUpload"
+    ]
+}

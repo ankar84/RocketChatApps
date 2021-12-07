@@ -24,9 +24,7 @@ export class OutOfOfficeApp extends App implements IPostMessageSent {
         return message.room.type === RoomType.DIRECT_MESSAGE;
     }
 
-    public async executePostMessageSent(message: IMessage, read: IRead,
-                                        http: IHttp, persistence: IPersistence): Promise<void> {
-
+    public async executePostMessageSent(message: IMessage, read: IRead, http: IHttp, persistence: IPersistence): Promise<void> {
         // If I'm away and type, need to offer an option to leave away
         const me = message.sender;
         const assocMe = new RocketChatAssociationRecord(RocketChatAssociationModel.USER, me.id);
