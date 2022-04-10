@@ -1,0 +1,4 @@
+{
+    "outOfOfficeParamExample": "out|in|status <Ваше сообщениие Вне офиса (опционально)>",
+    "outOfOfficeDescription": "Позволяет установить статус Вне офиса с сообщением или без него"
+}
